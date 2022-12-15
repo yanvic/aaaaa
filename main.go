@@ -1,41 +1,28 @@
-package golang
+package main
 
 import (
-	"github.com/yanvic/aaaaa/conta"
+	"fmt"
 )
 
-type ContaConrrente struct {
-	Titular     conta.Titular
-	NumeroConta int
-	Saldo       float64
-}
+// tipos de variaveis
+func main() {
+	var variavel string = "variavel 1"
+	variavel2 := "variavel 2"
+	fmt.Println(variavel)
+	fmt.Println(variavel2)
 
-func (c *ContaConrrente) Saque(valorDoSaque float64) string {
-	podeSacar := valorDoSaque > 0 && valorDoSaque <= c.Saldo
-	if podeSacar {
-		c.Saldo -= valorDoSaque
-		return "saldo realizado"
-	} else {
-		return "saldo insuficiente"
-	}
+	var (
+		variavel3 string = "var3"
+		variavel4 string = "var4"
+	)
+	fmt.Println(variavel3, variavel4)
 
-}
+	variavel5, variavel6 := "variavel 5", "variavel 6"
+	fmt.Println(variavel5, variavel6)
 
-func (c *ContaConrrente) Depositar(valorDoDeposito float64) (string, float64) {
-	if valorDoDeposito > 0 {
-		c.Saldo += valorDoDeposito
-		return "deposito realizado", c.Saldo
-	} else {
-		return "o valor do deposito é menor que zero", c.Saldo
-	}
-}
-
-func (c *ContaConrrente) Tranferir(valorTransferencia float64, contaDestino *ContaConrrente) bool {
-	if valorTransferencia < c.Saldo && valorTransferencia > 0 {
-		c.Saldo -= valorTransferencia
-		contaDestino.Depositar(valorTransferencia)
-		return true
-	} else {
-		return false
-	}
+	const constante1 string = "constante1"
+	fmt.Println(constante1)
+	//inverter variaveis
+	variavel5, variavel6 = variavel6, variavel5
+	fmt.Println(variavel5, variavel6)
 }
