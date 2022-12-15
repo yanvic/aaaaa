@@ -1,10 +1,13 @@
 package golang
 
+import (
+	"github.com/yanvic/aaaaa/conta"
+)
+
 type ContaConrrente struct {
-	Titular       clientes.Titular
-	NumeroAgencia int
-	NumeroConta   int
-	Saldo         float64
+	Titular     conta.Titular
+	NumeroConta int
+	Saldo       float64
 }
 
 func (c *ContaConrrente) Saque(valorDoSaque float64) string {
