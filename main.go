@@ -2,10 +2,14 @@ package main
 
 import (
 	"fmt"
+	"github.com/yanvic/aaaaa/struct"
 )
-
+type Main struct {
+	none  usuario.
+	idade int
+}
 // tipos de variaveis
-func main() {
+func variaveis() {
 	var variavel string = "variavel 1"
 	variavel2 := "variavel 2"
 	fmt.Println(variavel)
